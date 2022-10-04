@@ -46,3 +46,22 @@ while(i > value.length){ 0, 1, 3, 5
 Return sum
 }
 //
+
+//
+Const bst = (root) => { 
+    Let queue = [root] // 2
+    while(queue.length > 0){
+    Let current = queue.shift(); 
+    if(current.left.val >= current.val && current.val !== null){
+    Return false
+}
+    if(current.right.val <= current.val && current.val !== null){
+    Return false
+}
+if(current.left) queue.push(current.left)
+if(current.right) queue.push(current.right)
+}
+Return true
+}
+
+//
