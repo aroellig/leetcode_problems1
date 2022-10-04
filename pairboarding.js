@@ -64,4 +64,12 @@ if(current.right) queue.push(current.right)
 Return true
 }
 
+def inOrder(self, root, output):
+        if root is None:
+            return
+        
+        self.inOrder(root.left, output)
+        output.append(root.val)
+        self.inOrder(root.right, output)
+
 //
