@@ -47,7 +47,7 @@ Return sum
 }
 //
 
-//
+// pairboarding 10/4/22
 Const bst = (root) => { 
     Let queue = [root] // 2
     while(queue.length > 0){
