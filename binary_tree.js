@@ -67,6 +67,8 @@ const depthFirstValues = (root) => {
       //
 
       //
+      time: O(n)
+      space: O(n)
       const treeMinValue = (root) => {
         let min = Infinity;
           let stack = [root];
