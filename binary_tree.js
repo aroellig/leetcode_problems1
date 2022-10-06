@@ -97,6 +97,8 @@ const depthFirstValues = (root) => {
         //
 
         //
+        time: O(n)
+        space: O(n)
         const pathFinder = (root, target) => {
           const result = pathFinderHelper(root, target);
           if (result === null) {
