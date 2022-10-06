@@ -65,3 +65,19 @@ const depthFirstValues = (root) => {
         return false
       };
       //
+
+      //
+      const treeMinValue = (root) => {
+        let min = Infinity;
+          let stack = [root];
+          while(stack.length > 0){
+            let current = stack.pop();
+            if(current.val < min){
+              min = current.val
+            }
+            if(current.right) stack.push(current.right)
+            if(current.left) stack.push(current.left)
+          }
+          return min
+        };
+        //
