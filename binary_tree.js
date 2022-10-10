@@ -158,3 +158,18 @@ const depthFirstValues = (root) => {
             return (1 + Math.max(leftHeight, rightHeight))
           };
           //
+
+          //
+          time: O(n);
+          space: O(n);
+          const bottomRightValue = (root) => {
+            let queue = [root];
+              let current = null;
+              while(queue.length > 0){
+                 current = queue.shift();
+                if(current.left) queue.push(current.left);
+                if(current.right) queue.push(current.right)
+              }
+              return current.val
+            };
+            //
