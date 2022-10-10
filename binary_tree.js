@@ -127,3 +127,23 @@ const depthFirstValues = (root) => {
           return null;
         };
         //
+
+        //
+        time: O(n)
+        space: O(n)
+        const treeValueCount = (root, target) => {
+          if(root === null) return 0
+        let count = 0;
+          let stack = [root];
+          while(stack.length > 0){
+            let current = stack.pop();
+            if(current.val === target){
+              count ++
+            }
+            if(current.right) stack.push(current.right);
+            if(current.left) stack.push(current.left)
+          }
+          return count
+        };
+
+        //
