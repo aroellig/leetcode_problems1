@@ -197,5 +197,21 @@ const depthFirstValues = (root) => {
             //
             time: O(n)
             space: O(n)
-
+            const treeLevels = (root) => {
+              if(root === null) return [];
+              const levels = []
+              const stack = [{node:root, levelNum: 0}];
+              while(stack.length > 0){
+               const {node, levelNum} = stack.pop();
+                if(levels.length === levelNum){
+                  levels.push([node.val])
+                } else{
+                  levels[levelNum].push(node.val);
+                }
+                if(node.right !== null) stack.push({node: node.right, levelNum: levelNum + 1})
+                if(node.left !== null) stack.push({node: node.left, levelNum: levelNum + 1})
+              }
+              return levels;
+            };
+            
             //
