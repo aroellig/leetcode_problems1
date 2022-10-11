@@ -193,3 +193,9 @@ const depthFirstValues = (root) => {
                return paths;
              };
             //
+
+            //
+            time: O(n)
+            space: O(n)
+
+            //
