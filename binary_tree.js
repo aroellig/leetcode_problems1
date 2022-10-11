@@ -173,3 +173,9 @@ const depthFirstValues = (root) => {
               return current.val
             };
             //
+
+            //
+            time: O(n)
+            space: O(n)
+
+            //
