@@ -246,3 +246,9 @@ const depthFirstValues = (root) => {
                 fillLevels(root.right, levels, levelNum + 1);
               }
             //
+
+            //
+            time: O(n)
+            space: O(n)
+
+            //
