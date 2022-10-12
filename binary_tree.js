@@ -299,4 +299,16 @@ const depthFirstValues = (root) => {
               }
               return leaves
             };
+            const leafList = (root) => {
+              const leaves = [];
+                fillLeaves(root, leaves);
+                return leaves;
+              };
+              
+              const fillLeaves = (root, leaves) => {
+                if(root === null) return;
+                if(root.left === null && root.right === null) leaves.push(root.val);
+                fillLeaves(root.left, leaves);
+                fillLeaves(root.right, leaves)
+              }
             //
