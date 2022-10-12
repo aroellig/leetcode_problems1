@@ -250,5 +250,34 @@ const depthFirstValues = (root) => {
             //
             time: O(n)
             space: O(n)
-
+            const levelAverages = (root) => {
+              const levels = [];
+                fillLevels(root, levels, 0)
+                const avgs = [];
+                for(let level of levels){
+                  getAvg(level);
+                  avgs.push(getAvg(level))
+                }
+                return avgs
+              };
+              
+              const getAvg = (array) => {
+                let sum = 0;
+                for(let num of array){
+                  sum += num;
+                }
+                return sum / array.length
+              }
+              
+              const fillLevels = (root, levels, levelNum) => {
+                if(root === null) return;
+                if(levels.length === levelNum){
+                  levels.push([root.val]);
+                } else {
+                  levels[levelNum].push(root.val);
+                }
+                
+                fillLevels(root.left, levels, levelNum + 1)
+                fillLevels(root.right, levels, levelNum + 1)
+              }
             //
