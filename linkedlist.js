@@ -39,4 +39,17 @@ const linkedListValues = (head) => {
             if(head === null) return 0;
              return head.val + sumList(head.next)
             };
-//        
+//       
+
+//
+const linkedListFind = (head, target) => {
+    let current = head;
+     while(current !== null){
+       if(current.val === target){
+         return true
+       }
+       current = current.next
+     }
+     return false
+   };
+   //
