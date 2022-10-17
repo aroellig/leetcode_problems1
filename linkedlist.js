@@ -24,6 +24,7 @@ const linkedListValues = (head) => {
     //
 
     //
+    time: O(n)
     const sumList = (head) => {
         let sum = 0;
           let current = head;
@@ -33,4 +34,9 @@ const linkedListValues = (head) => {
           }
           return sum
         };
+        space: n 
+        const sumList = (head) => {
+            if(head === null) return 0;
+             return head.val + sumList(head.next)
+            };
 //        
