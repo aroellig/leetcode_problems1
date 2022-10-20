@@ -199,3 +199,26 @@ const zipperLists = (head1, head2) => {
             };
             
         //
+
+        //
+        const longestStreak = (head) => {
+            let maxStreak = 0;
+              let currentStreak = 0;
+              let currentNode = head;
+              let prevVal = null;
+              while(currentNode !== null){
+                if(currentNode.val === prevVal){
+                  currentStreak ++
+                } else {
+                  currentStreak = 1
+                }
+                prevVal = currentNode.val;
+                if(currentStreak > maxStreak){
+                  maxStreak = currentStreak;
+                }
+                currentNode = currentNode.next;
+              }
+              
+              return maxStreak
+            };
+            //
