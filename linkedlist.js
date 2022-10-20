@@ -189,4 +189,13 @@ const zipperLists = (head1, head2) => {
           }
           return true
         };
+
+        const isUnivalueList = (head, prevVal = null) => {
+            if(head === null) return true;
+              if(prevVal !== null && head.val !== prevVal){
+                return false
+              }
+              return isUnivalueList(head.next, head.val);
+            };
+            
         //
