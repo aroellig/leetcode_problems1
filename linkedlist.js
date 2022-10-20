@@ -222,3 +222,23 @@ const zipperLists = (head1, head2) => {
               return maxStreak
             };
             //
+
+            //
+            const removeNode = (head, targetVal) => {
+                if(head.val === targetVal){
+                  return head.next
+                }
+                let prev = null;
+                let current = head;
+                
+                while(current !== null){
+                  if(current.val === targetVal){
+                    prev.next = current.next;
+                    break;
+                  }
+                  prev = current;
+                  current = current.next;
+                }
+                return head;
+              };
+              //
